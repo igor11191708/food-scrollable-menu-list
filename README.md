@@ -45,8 +45,10 @@ Create view for **Model**
         let item: ListModel
 
         var body: some View {
-           Text(item.title)
-           Divider().background(getColor).padding(.horizontal)
+            VStack{
+                Text(item.title)
+                Divider()
+            }
         }
     }
 ```
