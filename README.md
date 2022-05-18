@@ -25,7 +25,7 @@ Define enum that is category for menu conforming to ```IMenuItem```
 ```
 
 ### 2. Model 
-That comforms to ```IListModel```
+Define model that comforms to ```IListModel```
 ```Swift 
     struct ListModel : IListModel{
         
@@ -38,7 +38,7 @@ That comforms to ```IListModel```
 ```
 
 ### 3. Template 
-That is view for a list item
+Create view for **Model**
 ```Swift 
     struct ItemTpl: View {
 
