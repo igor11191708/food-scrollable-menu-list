@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "d3-color",
+        "repositoryURL": "https://github.com/The-Igor/d3-color.git",
+        "state": {
+          "branch": null,
+          "revision": "67dcc80aa0f2b8e7cfe998424d12ccb325d9993c",
+          "version": "1.0.1"
+        }
+      },
+      {
+        "package": "d3-menu-bar",
+        "repositoryURL": "https://github.com/The-Igor/d3-menu-bar.git",
+        "state": {
+          "branch": null,
+          "revision": "694c717829a24f16e7f7333760ed74b8e73627ce",
+          "version": "1.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
