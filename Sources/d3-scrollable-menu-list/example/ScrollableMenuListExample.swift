@@ -58,6 +58,10 @@ public struct ScrollableMenuListExample: View {
         VStack(spacing : 0) {
             ScrollableMenuList(items: data, content: { ItemTpl(item: $0) })
             DayNightToggle(toggleScheme: $toggleScheme)
+                .background(Rectangle()
+                                .fill(.thickMaterial)
+                                .ignoresSafeArea()
+                )
         }
         .background(toggleScheme ? .black : .white)
         .environment(\.colorScheme, toggleScheme ? .dark : .light)

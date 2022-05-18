@@ -80,9 +80,10 @@ Create view for **Model**
 | --- | --- |
 |**round**| rounded corners |
 |**square**| squared corners |
-
+[![click to watch expected UI behavior for the example](https://github.com/The-Igor/d3-scrollable-menu-list/blob/main/Sources/img/img.png)](https://youtu.be/PQRkU7yWUrk)
 [![click to watch expected UI behavior for the example](https://github.com/The-Igor/d3-scrollable-menu-list/blob/main/Sources/img/light.png)](https://youtu.be/PQRkU7yWUrk)
 [![click to watch expected UI behavior for the example](https://github.com/The-Igor/d3-scrollable-menu-list/blob/main/Sources/img/dark.png)](https://youtu.be/PQRkU7yWUrk)
+[![click to watch expected UI behavior for the example](https://github.com/The-Igor/d3-scrollable-menu-list/blob/main/Sources/img/scroll.gif)](https://youtu.be/PQRkU7yWUrk)
 ## Code example
 
 Take a look on the example preview in [**ScrollableMenuListExample.swift**](https://github.com/The-Igor/d3-scrollable-menu-list/blob/main/Sources/d3-scrollable-menu-list/example/ScrollableMenuListExample.swift) or create a project, add the package and put **ScrollableMenuListExample()** in **ContentView()**
