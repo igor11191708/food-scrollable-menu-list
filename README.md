@@ -4,7 +4,7 @@
 - [x] Auto scroll menu while navigating the list
 - [x] The menu and category color intensity automatically adjusts depending on color scheme 
     You don't need to set color for every scheme
-- [x] Various strategy for the item menu width allocation
+- [x] Various strategies for the item menu width allocation
 - [x] Setting custom colors for the menu
 - [x] Customize menu item style [round or square]
 - [x] iOS and macOS support
