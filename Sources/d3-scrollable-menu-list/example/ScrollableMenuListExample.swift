@@ -42,14 +42,13 @@ public struct ScrollableMenuListExample: View {
                 "Roast beef slices",
                 "Three bean stew",
                 "Veg spring rolls"
-            ][Int.random(in: 0...8)]
-            let img = ["tortoise", "ladybug", "leaf", "ant", "hare"][Int.random(in: 0...4)]
+            ].randomElement()!
+            
             d.append(
                     .init(category: category,
                     title: title,
                     description: description,
-                    price: "\(price)",
-                    image: img)
+                    price: "\(price)")
             )
         }
         data = d
@@ -60,7 +59,7 @@ public struct ScrollableMenuListExample: View {
             ScrollableMenuList(items: data, content: { ItemTpl(item: $0) })
             DayNightToggle(toggleScheme: $toggleScheme)
         }
-        .background(toggleScheme ? .gray.opacity(0.1) : Color.white)
+        .background(toggleScheme ? .black : .white)
         .environment(\.colorScheme, toggleScheme ? .dark : .light)
     }
 

@@ -33,7 +33,7 @@ struct ItemTpl: View {
                         .font(.caption)
                         .foregroundColor(.gray)
                     Text("\(item.price)$")
-                        .font(.body.bold())
+                        .font(.title2.bold())
                         .frame(maxWidth: .infinity, alignment: .trailing)
                 }
             }

@@ -16,6 +16,8 @@
 Define enum that is category for menu conforming to ```IMenuItem```
 
 ```Swift 
+    import d3_menu_bar
+
     enum MenuItems: String, IMenuItem {
 
         case breakfast = "Breakfast"        

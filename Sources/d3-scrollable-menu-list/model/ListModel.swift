@@ -21,6 +21,4 @@ struct ListModel : IListModel{
     
     let price : String
     
-    let image : String
-    
 }
