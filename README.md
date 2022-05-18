@@ -79,6 +79,7 @@ Create view for **Model**
 |**round**| rounded corners |
 |**square**| squared corners |
 
+[![click to watch expected UI behavior for the example](https://github.com/The-Igor/d3-scrollable-menu-list/blob/main/Sources/img/light.png)](https://youtu.be/PQRkU7yWUrk)
 
 ## Code example
 
