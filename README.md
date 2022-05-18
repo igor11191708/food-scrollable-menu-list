@@ -2,7 +2,7 @@
 
 ## Features
 - [x] Auto scroll menu while navigating the list
-- [x] The menu color intensity automatically adjusts depending on color scheme 
+- [x] The menu and category color intensity automatically adjusts depending on color scheme 
     You don't need to set color for every scheme
 - [x] Various strategy for the item menu width allocation
 - [x] Setting custom colors for the menu
