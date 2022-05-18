@@ -82,4 +82,4 @@ Create view for **Model**
 
 ## Code example
 
-Take a look on the example preview in [**ScrollableMenuListExample.swift**](https://github.com/The-Igor/d3-menu-bar/blob/main/Sources/d3-scrollable-menu-list/example/ScrollableMenuListExample.swift) or create a project, add the package and put **ScrollableMenuListExample()** in **ContentView()**
+Take a look on the example preview in [**ScrollableMenuListExample.swift**](https://github.com/The-Igor/d3-scrollable-menu-list/blob/main/Sources/d3-scrollable-menu-list/example/ScrollableMenuListExample.swift) or create a project, add the package and put **ScrollableMenuListExample()** in **ContentView()**
