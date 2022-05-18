@@ -26,12 +26,6 @@ struct OffsetCategory<C: IMenuItem>: ViewModifier {
     /// Available visible size for scrollview
     let size: CGSize
 
-    func select(_ category: C) {
-        withAnimation {
-            selected = category
-        }
-    }
-
     // MARK: - Life circle
 
     /// The content and behavior of the view
@@ -53,13 +47,21 @@ struct OffsetCategory<C: IMenuItem>: ViewModifier {
             if condition {
                 select(category)
             } else {
-                let condition = minY > size.height &&
+                let nextCondition = minY > size.height &&
                     selected == category &&
                     !suspend
-                if condition {
+                if nextCondition {
                     select(category.previous())
                 }
             }
+        }
+    }
+    
+    // MARK: - Private
+    
+    private func select(_ category: C) {
+        withAnimation {
+            selected = category
         }
     }
 }
