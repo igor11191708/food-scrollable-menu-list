@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-///Modifier to detect scroll longevity
+///Modifier to detect scrolling longevity
 struct ScrollDetect: ViewModifier {
     
     func body(content: Content) -> some View {

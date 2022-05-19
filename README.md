@@ -13,7 +13,9 @@
 ## Required
 
 ### 1. Enum
-Define enum that is category for menu conforming to ```IMenuItem```
+Define enum that conforming to ```IMenuItem```
+Protocol from package **d3_menu_bar**
+It is categories for the menu and list section headers
 
 ```Swift 
     import d3_menu_bar
@@ -28,6 +30,8 @@ Define enum that is category for menu conforming to ```IMenuItem```
 
 ### 2. Model 
 Define model that comforms to ```IListModel```
+Add fields that you need to represent in List lines
+
 ```Swift 
     struct ListModel : IListModel{
         
@@ -41,6 +45,7 @@ Define model that comforms to ```IListModel```
 
 ### 3. Template 
 Create view for **Model**
+All representation of the template is up to you. It was included in component's API on purpose to let easily control List representation via configuration.
 ```Swift 
     struct ItemTpl: View {
 
