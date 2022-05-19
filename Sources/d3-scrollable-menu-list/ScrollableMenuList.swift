@@ -10,6 +10,10 @@ import d3_menu_bar
 import Combine
 
 /// Auto scrollable header menu component SwiftUI and Combine
+/// - Important: There are three required interfaces that have to be defined
+///  **IMenuItem** from package **d3_menu_bar**,
+///  ``IListModel`` and
+///  ``IItemTpl``
 @available(iOS 15.0, macOS 12.0, watchOS 6.0, *)
 public struct ScrollableMenuList<C: IMenuItem, M : IListModel, Content: IItemTpl>: View where M.Category == C
 {
