@@ -14,6 +14,13 @@
 
 ## Required
 
+There are three **required interfaces** that have to be defined
+
+|protocol| description|
+|IMenuItem| enum - menu categories|
+|IListModel| struct (Model) |
+|IItemTpl| struct (View) |
+
 ### 1. Enum
 Define **enum** that conforming to ```IMenuItem```. Protocol from package **d3_menu_bar**
 It is categories for the menu and list section headers
