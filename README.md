@@ -1,7 +1,8 @@
 # Auto scrollable header menu (SwiftUI)
 
 ## Features
-- [x] Auto scroll menu while navigating the list
+- [x] Auto scroll menu while navigating the list up and down
+- [x] Smart detection of the section position in the user's field of view
 - [x] The menu and category color intensity automatically adjusts depending on color scheme 
     You don't need to set color for every scheme
 - [x] Various strategies for the item menu width allocation
@@ -43,7 +44,7 @@ Add fields that you need in the List line representation
 ```
 
 ### 3. Template 
-Create view for **Model**
+Create view for **2. Model**
 All representation of the template is up to you. It was included in component's API on purpose to let easily control List representation via configuration.
 ```Swift 
     struct ItemTpl: View {
