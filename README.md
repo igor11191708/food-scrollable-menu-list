@@ -45,10 +45,11 @@ Add fields that you need in the List line representation
 ```
 
 ### 3. Template 
-Create view for **2. Model**
+Create view for **2. Model** that comforms to ```IItemTpl```.
+
 All representation of the template is up to you. It was included in component's API on purpose to let easily control List representation via configuration.
 ```Swift 
-    struct ItemTpl: View {
+    struct ItemTpl: IItemTpl {
 
         let item: ListModel
 

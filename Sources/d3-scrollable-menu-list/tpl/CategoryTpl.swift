@@ -10,7 +10,7 @@ import d3_menu_bar
 
 
 /// Category template
-struct CategoryTpl<C: IMenuItem, M : IListModel, Content: View>: View where M.Category == C {
+struct CategoryTpl<C: IMenuItem, M : IListModel, Content: IItemTpl>: View where M.Category == C {
 
     @Environment(\.colorScheme) var colorScheme
     

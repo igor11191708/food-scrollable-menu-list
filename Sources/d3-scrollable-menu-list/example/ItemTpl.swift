@@ -9,7 +9,7 @@ import SwiftUI
 
 
 /// Item template
-struct ItemTpl: View {
+struct ItemTpl: IItemTpl {
 
     @Environment(\.colorScheme) var colorScheme
 

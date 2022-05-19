@@ -11,7 +11,7 @@ import Combine
 
 @available(iOS 15.0, macOS 12.0, watchOS 6.0, *)
 /// # Auto scrollable header menu (SwiftUI)
-public struct ScrollableMenuList<C: IMenuItem, M : IListModel, Content: View>: View where M.Category == C
+public struct ScrollableMenuList<C: IMenuItem, M : IListModel, Content: IItemTpl>: View where M.Category == C
 {
     ///detecting scroll movement
     private let detector: CurrentValueSubject<CGFloat, Never>
@@ -98,10 +98,10 @@ public struct ScrollableMenuList<C: IMenuItem, M : IListModel, Content: View>: V
             }
         }.padding(.top)
     }
-    
+
     // MARK: - Private
 
-    
+
     /// Offset category modifier
     /// - Parameters:
     ///   - category: category
