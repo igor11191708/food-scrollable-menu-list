@@ -14,7 +14,9 @@
 
 ### 1. Enum
 Define enum that conforming to ```IMenuItem```
+
 Protocol from package **d3_menu_bar**
+
 It is categories for the menu and list section headers
 
 ```Swift 
