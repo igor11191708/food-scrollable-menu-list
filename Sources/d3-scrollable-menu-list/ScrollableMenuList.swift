@@ -11,15 +11,6 @@ import Combine
 
 @available(iOS 15.0, macOS 12.0, watchOS 6.0, *)
 /// # Auto scrollable header menu (SwiftUI)
-/// ## Features
-/// - [x] Auto scroll menu while navigating the list
-/// - [x] The menu color intensity automatically adjusts depending on color scheme
-///     You don't need to set color for every scheme
-/// - [x] Various strategy for the item menu width allocation
-/// - [x] Setting custom colors for the menu
-/// - [x] Customize menu item style [round or square]
-/// - [x] iOS and macOS support
-/// - [x] Dark and light scheme support
 public struct ScrollableMenuList<C: IMenuItem, M : IListModel, Content: View>: View where M.Category == C
 {
     ///detecting scroll movement
@@ -55,7 +46,6 @@ public struct ScrollableMenuList<C: IMenuItem, M : IListModel, Content: View>: V
 
     /// menu style
     let menuBarStyle: MenuBar<C>.Style
-
 
     // MARK: - Life circle
 

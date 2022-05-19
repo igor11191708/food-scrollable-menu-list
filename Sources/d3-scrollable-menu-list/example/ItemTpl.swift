@@ -28,7 +28,6 @@ struct ItemTpl: View {
                     Text(item.title)
                         .font(.title2)
                         .frame(maxWidth: .infinity, alignment: .leading)
-
                     Text(item.description)
                         .font(.caption)
                         .foregroundColor(.gray)
