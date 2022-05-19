@@ -66,7 +66,7 @@ public struct ScrollableMenuList<C: IMenuItem, M : IListModel, Content: View>: V
 
         self.content = content
 
-        category = C.allCases.map { $0 }
+        self.category = C.allCases.map { $0 }
 
         _selected = State(initialValue: category.first)
 

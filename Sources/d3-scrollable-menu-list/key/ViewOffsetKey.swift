@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-/// Offset key to detect category possition
+/// Key to detect to detect scrolling longevity
 struct ViewOffsetKey: PreferenceKey {
     
     typealias Value = CGFloat
