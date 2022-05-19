@@ -55,7 +55,7 @@ All representation of the template is up to you. It was included in component's 
             VStack{
                 Text(item.title)
                 Divider()
-            }
+            }.padding()
         }
     }
 ```
