@@ -9,8 +9,8 @@ import SwiftUI
 import d3_menu_bar
 import Combine
 
+/// Auto scrollable header menu component SwiftUI and Combine
 @available(iOS 15.0, macOS 12.0, watchOS 6.0, *)
-/// # Auto scrollable header menu (SwiftUI)
 public struct ScrollableMenuList<C: IMenuItem, M : IListModel, Content: IItemTpl>: View where M.Category == C
 {
     ///detecting scroll movement

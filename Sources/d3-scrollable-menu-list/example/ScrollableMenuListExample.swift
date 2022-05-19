@@ -19,6 +19,8 @@ enum MenuItems: String, IMenuItem {
 }
 
 
+/// Example view to demonstrate ``ScrollableMenuList``
+@available(iOS 15.0, macOS 12.0, watchOS 6.0, *)
 public struct ScrollableMenuListExample: View {
 
     let data: [ListModel]
