@@ -13,9 +13,7 @@
 ## Required
 
 ### 1. Enum
-Define enum that conforming to ```IMenuItem```
-Protocol from package **d3_menu_bar**
-
+Define enum that conforming to ```IMenuItem```. Protocol from package **d3_menu_bar**
 It is categories for the menu and list section headers
 
 ```Swift 
@@ -30,8 +28,8 @@ It is categories for the menu and list section headers
 ```
 
 ### 2. Model 
-Define model that comforms to ```IListModel```
-Add fields that you need to represent in List lines
+Define model that comforms to ```IListModel```.
+Add fields that you need in the List line representation
 
 ```Swift 
     struct ListModel : IListModel{
