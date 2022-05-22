@@ -3,7 +3,7 @@
 ## Features
 - [x] Auto scroll menu while navigating the list up and down
 - [x] Navigate to any section from up menu
-- [x] Smart detection the position of the section in the user's field of view
+- [x] Smart detection the active position in the user's field of view
 - [x] The menu and category color intensity automatically adjusts depending on color scheme 
     You don't need to set color for every scheme
 - [x] Various strategies for the item menu width allocation
