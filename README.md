@@ -76,6 +76,8 @@ All representation of the template is up to you. It was included in component's 
 ```
 
 ### 4. Create Auto scrollable header menu
+* `items` - array of data
+* `content` - tpl for an item representation
 
 ```Swift 
     let data: [ListModel] = //Pass array of data
