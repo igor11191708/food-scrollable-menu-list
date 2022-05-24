@@ -9,7 +9,7 @@
 - [x] Various strategies for the item menu width allocation
 - [x] Setting custom colors for the menu
 - [x] Customize menu item style [round or square]
-- [x] iOS and macOS support
+- [x] Multiplatform, iOS and macOS support
 - [x] Dark and light scheme support
 
 ## Documentation(API)
