@@ -1,7 +1,7 @@
 # Auto scrollable header menu - SwiftUI & Combine
 
 ## Features
-- [x] Auto scroll menu while navigating the list up and down
+- [x] Auto scrollable up menu while navigating the list up and down
 - [x] Navigate to any section from up menu
 - [x] Smart detection the active position in the user's field of view
 - [x] The menu and category color intensity automatically adjusts depending on color scheme 

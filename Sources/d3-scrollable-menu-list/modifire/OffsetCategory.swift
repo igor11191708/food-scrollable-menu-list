@@ -22,7 +22,7 @@ struct OffsetCategory<C: IMenuItem>: ViewModifier {
 
     /// Suspend scroll action, true - to suspend
     @Binding var suspend: Bool
-    
+
     /// Available visible size for scrollview
     let size: CGSize
 
@@ -32,33 +32,44 @@ struct OffsetCategory<C: IMenuItem>: ViewModifier {
     func body(content: Content) -> some View {
         content
             .overlay {
-            GeometryReader { proxy in
-                Color.clear
-                    .preference(key: OffsetCategoryKey.self, value: proxy.frame(in: .named("OFFSET")))
-            }
-        }
-            .onPreferenceChange(OffsetCategoryKey.self) { rect in
-            let minY = rect.minY
-
-            let condition = minY >= 0 && minY < size.height &&
-                selected != category &&
-                !suspend
-
-            if condition {
-                select(category)
-            } else {
-                let nextCondition = minY > size.height &&
-                    selected == category &&
-                    !suspend
-                if nextCondition {
-                    select(category.previous())
+                GeometryReader { proxy in
+                    let rect = proxy.frame(in: .named("OFFSET"))
+                    Color.clear.preference(key: OffsetCategoryKey.self, value: rect)
                 }
+        }
+            .onPreferenceChange(OffsetCategoryKey.self, perform: onOffsetCategoryChanged)
+    }
+
+    // MARK: - Private
+
+
+    /// Sync list and up menu according to active area
+    /// - Parameter rect: Active area reletive to namespace OFFSET
+    private func onOffsetCategoryChanged(rect: CGRect) {
+
+        let minY = rect.minY
+        let height = size.height
+
+        if suspend { return }
+
+        ///if not selected and in the rect
+        let condition = minY >= 0 && minY < height && selected != category
+
+        if condition {
+            select(category)
+        } else {
+
+            ///if selected but beyond of the rect to  set active previous category
+            let nextCondition = minY > height && selected == category
+
+            if nextCondition {
+                select(category.previous())
             }
         }
     }
-    
-    // MARK: - Private
-    
+
+    /// Select category
+    /// - Parameter category: Type of category
     private func select(_ category: C) {
         withAnimation {
             selected = category
@@ -68,13 +79,13 @@ struct OffsetCategory<C: IMenuItem>: ViewModifier {
 
 
 fileprivate extension IMenuItem {
-    
+
     /// Get previous element
     /// - Returns: previous element or current if previous does not exist
     func previous() -> Self {
         let all = Self.allCases
         let startIndex = all.startIndex
-        guard let idx = all.firstIndex(of: self) else{
+        guard let idx = all.firstIndex(of: self) else {
             return self
         }
         let previous = all.index(idx, offsetBy: -1)

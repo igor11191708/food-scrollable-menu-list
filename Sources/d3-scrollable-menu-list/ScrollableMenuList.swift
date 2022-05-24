@@ -105,7 +105,6 @@ public struct ScrollableMenuList<C: IMenuItem, M : IListModel, Content: IItemTpl
 
     // MARK: - Private
 
-
     /// Offset category modifier
     /// - Parameters:
     ///   - category: category
