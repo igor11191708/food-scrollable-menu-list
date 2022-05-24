@@ -94,9 +94,9 @@ All representation of the template is up to you. It was included in component's 
 |**auto**| Auto size acoording the content |
 |**flex(CGFloat)**| Set up minimal width|
 
-* `menuBarColor` - default value is **.black**
+* `menuBarColor` - default value is **.blue**
 
-* `menuBarStyle` - default style is **round**
+* `menuBarStyle` - default style is **square**
 
 | Style | Description |
 | --- | --- |
