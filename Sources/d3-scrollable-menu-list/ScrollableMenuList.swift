@@ -60,7 +60,7 @@ public struct ScrollableMenuList<C: IMenuItem, M : IListModel, Content: IItemTpl
     ///   - menuStyle: menu style
     public init(
         items: [M],
-        @ViewBuilder content: @escaping (M) -> Content,
+        content: @escaping (M) -> Content,
         menuStrategy: MenuBar<C>.Strategy = .auto,
         menuColor: Color = .blue,
         menuStyle: MenuBar<C>.Style = .square
@@ -74,6 +74,7 @@ public struct ScrollableMenuList<C: IMenuItem, M : IListModel, Content: IItemTpl
 
         _selected = State(initialValue: category.first)
 
+        ///on scroll action detecter from start to end
         let detector = CurrentValueSubject<CGFloat, Never>(0)
         self.publisher = detector
             .debounce(for: .seconds(0.2), scheduler: DispatchQueue.main)
@@ -81,6 +82,7 @@ public struct ScrollableMenuList<C: IMenuItem, M : IListModel, Content: IItemTpl
             .eraseToAnyPublisher()
         self.detector = detector
 
+        ///up menu settings
         self.menuBarStrategy = menuStrategy
         self.menuBarColor = menuColor
         self.menuBarStyle = menuStyle
