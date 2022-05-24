@@ -60,9 +60,9 @@ public struct ScrollableMenuList<C: IMenuItem, M : IListModel, Content: IItemTpl
     ///   - menuStyle: menu style
     public init(
         items: [M],
-        content: @escaping (M) -> Content,
+        @ViewBuilder content: @escaping (M) -> Content,
         menuStrategy: MenuBar<C>.Strategy = .auto,
-        menuColor: Color? = .blue,
+        menuColor: Color = .blue,
         menuStyle: MenuBar<C>.Style = .square
     ) {
 
@@ -82,7 +82,7 @@ public struct ScrollableMenuList<C: IMenuItem, M : IListModel, Content: IItemTpl
         self.detector = detector
 
         self.menuBarStrategy = menuStrategy
-        self.menuBarColor = menuColor ?? .black
+        self.menuBarColor = menuColor
         self.menuBarStyle = menuStyle
     }
 
