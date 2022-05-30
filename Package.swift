@@ -16,7 +16,7 @@ let package = Package(
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
-        .package(url: "https://github.com/The-Igor/d3-color.git" , from: "1.0.2"),
+        .package(url: "https://github.com/The-Igor/d3-color.git", from: "1.0.2"),
         .package(url: "https://github.com/The-Igor/d3-menu-bar.git" , from: "1.0.2"),
     ],
     targets: [
