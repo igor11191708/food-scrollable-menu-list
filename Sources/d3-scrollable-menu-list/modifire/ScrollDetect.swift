@@ -15,8 +15,18 @@ struct ScrollDetect: ViewModifier {
         content
             .background(GeometryReader {
             Color.clear.preference(key: ViewOffsetKey.self,
-                value: -$0.frame(in: .named("OFFSET")).origin.y)
+                value: getY($0))
         })
+    }
+    
+    // MARK: - Private
+    
+    /// Get offset
+    /// - Parameter proxy: Geometry proxy
+    /// - Returns: Return positive value of y offset
+    private func getY(_ proxy : GeometryProxy) -> CGFloat{
+        let size = proxy.frame(in: .named("OFFSET"))
+        return -size.origin.y
     }
 }
 
