@@ -6,27 +6,30 @@ import PackageDescription
 let package = Package(
     name: "d3-scrollable-menu-list",
     platforms: [
-        .macOS("12"), .iOS("15"), .tvOS("15"), .watchOS("6")
+        .macOS("12"), .iOS("15"), .tvOS("15"), .watchOS("6"),
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "d3-scrollable-menu-list",
-            targets: ["d3-scrollable-menu-list"]),
+            targets: ["d3-scrollable-menu-list"]
+        ),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
-        .package(url: "https://github.com/The-Igor/d3-color.git" , from: "2.0.0"),
-        .package(url: "https://github.com/The-Igor/d3-menu-bar.git" , .branchItem("main")),
+        .package(url: "https://github.com/The-Igor/d3-color.git", from: "2.0.0"),
+        .package(url: "https://github.com/The-Igor/d3-menu-bar.git", .branchItem("main")),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "d3-scrollable-menu-list",
-            dependencies: ["d3-color", "d3-menu-bar"]),
+            dependencies: ["d3-color", "d3-menu-bar"]
+        ),
         .testTarget(
             name: "d3-scrollable-menu-listTests",
-            dependencies: ["d3-scrollable-menu-list"]),
+            dependencies: ["d3-scrollable-menu-list"]
+        ),
     ]
 )

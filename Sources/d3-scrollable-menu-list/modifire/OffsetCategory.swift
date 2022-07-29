@@ -5,19 +5,17 @@
 //  Created by Igor Shelopaev on 18.05.2022.
 //
 
-import SwiftUI
 import d3_menu_bar
+import SwiftUI
 
-
-/// Modifier to detect category possition
+/// Modifier to detect category position
 struct OffsetCategory<C: IMenuItem>: ViewModifier {
-
     // MARK: - Cgf
 
     /// Menu category
     let category: C
 
-    ///Selected menu
+    /// Selected menu
     @Binding var selected: C?
 
     /// Suspend scroll action, true - to suspend
@@ -36,30 +34,27 @@ struct OffsetCategory<C: IMenuItem>: ViewModifier {
                     let rect = proxy.frame(in: .named("OFFSET"))
                     Color.clear.preference(key: OffsetCategoryKey.self, value: rect)
                 }
-        }
+            }
             .onPreferenceChange(OffsetCategoryKey.self, perform: onOffsetCategoryChanged)
     }
 
     // MARK: - Private
 
-
     /// Sync list and up menu according to active area
-    /// - Parameter rect: Active area reletive to namespace OFFSET
+    /// - Parameter rect: Active area relative to namespace OFFSET
     private func onOffsetCategoryChanged(rect: CGRect) {
-
         let minY = rect.minY
         let height = size.height
 
         if suspend { return }
 
-        ///if not selected and in the rect
+        /// if not selected and in the rect
         let condition = minY >= 0 && minY < height && selected != category
 
         if condition {
             select(category)
         } else {
-
-            ///if selected but beyond of the rect to  set active previous category
+            /// if selected but beyond of the rect to  set active previous category
             let nextCondition = minY > height && selected == category
 
             if nextCondition {
@@ -77,9 +72,7 @@ struct OffsetCategory<C: IMenuItem>: ViewModifier {
     }
 }
 
-
-fileprivate extension IMenuItem {
-
+private extension IMenuItem {
     /// Get previous element
     /// - Returns: previous element or current if previous does not exist
     func previous() -> Self {

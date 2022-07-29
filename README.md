@@ -44,7 +44,7 @@ It is categories for the menu and list section headers
 ```
 
 ### 2. Model 
-Define **model** that comforms to ```IListModel```.
+Define **model** that conforms to ```IListModel```.
 
 Add fields that you need in the List line representation
 
@@ -60,7 +60,7 @@ Add fields that you need in the List line representation
 ```
 
 ### 3. Template 
-Define **view** for **2. Model** that comforms to ```IItemTpl```.
+Define **view** for **2. Model** that conforms to ```IItemTpl```.
 
 All representation of the template is up to you. It was included in component's API on purpose to let easily control List representation via configuration.
 ```Swift 
@@ -92,8 +92,8 @@ All representation of the template is up to you. It was included in component's 
 
 | Size strategy | Description |
 | --- | --- |
-|**fit**| Alocate all affodable space **not scrollable**|
-|**auto**| Auto size acoording the content |
+|**fit**| Allocate all affordable space **not scrollable**|
+|**auto**| Auto size according the content |
 |**flex(CGFloat)**| Set up minimal width|
 
 * `menuBarColor` - default value is **.blue**

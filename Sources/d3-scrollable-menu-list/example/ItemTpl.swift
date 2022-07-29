@@ -7,14 +7,12 @@
 
 import SwiftUI
 
-
 /// Item template
 struct ItemTpl: IItemTpl {
-
     @Environment(\.colorScheme) var colorScheme
 
     // MARK: - Config
-    
+
     /// Data for template
     let item: ListModel
 
@@ -36,14 +34,14 @@ struct ItemTpl: IItemTpl {
                         .frame(maxWidth: .infinity, alignment: .trailing)
                 }
             }
-        } .padding(.horizontal)
+        }.padding(.horizontal)
             .foregroundColor(getColor)
         Divider().background(getColor).padding(.horizontal)
     }
 
     // MARK: - Private
+
     private var getColor: Color {
         colorScheme == .dark ? .white : .black
     }
-
 }

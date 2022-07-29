@@ -5,9 +5,9 @@
 //  Created by Igor Shelopaev on 18.05.2022.
 //
 
-import SwiftUI
-import d3_menu_bar
 import Combine
+import d3_menu_bar
+import SwiftUI
 
 /// Auto scrollable header menu component SwiftUI and Combine
 /// - Important: There are three required interfaces that have to be defined
@@ -15,21 +15,21 @@ import Combine
 ///  ``IListModel`` and
 ///  ``IItemTpl``
 @available(iOS 15.0, macOS 12.0, watchOS 6.0, *)
-public struct ScrollableMenuList<C: IMenuItem, M : IListModel, Content: IItemTpl>: View where M.Category == C
+public struct ScrollableMenuList<C: IMenuItem, M: IListModel, Content: IItemTpl>: View where M.Category == C
 {
-    ///detecting scroll movement
+    /// detecting scroll movement
     private let detector: CurrentValueSubject<CGFloat, Never>
 
-    ///publisher scroll movement
+    /// publisher scroll movement
     private let publisher: AnyPublisher<CGFloat, Never>
 
-    ///Grouped items
+    /// Grouped items
     private let items: [C: [M]]
 
     /// Menu categories
     private let category: [C]
 
-    ///Selected menu
+    /// Selected menu
     @State private var selected: C?
 
     /// Suspend scroll from ```OffsetCategory```
@@ -65,27 +65,26 @@ public struct ScrollableMenuList<C: IMenuItem, M : IListModel, Content: IItemTpl
         menuColor: Color = .blue,
         menuStyle: MenuBar<C>.Style = .square
     ) {
-
         self.items = Dictionary(grouping: items, by: { $0.category })
 
         self.content = content
 
-        self.category = C.allCases.map { $0 }
+        category = C.allCases.map { $0 }
 
         _selected = State(initialValue: category.first)
 
-        ///on scroll action detecter from start to end
+        /// on scroll action detecter from start to end
         let detector = CurrentValueSubject<CGFloat, Never>(0)
-        self.publisher = detector
+        publisher = detector
             .debounce(for: .seconds(0.2), scheduler: DispatchQueue.main)
             .dropFirst()
             .eraseToAnyPublisher()
         self.detector = detector
 
-        ///up menu settings
-        self.menuBarStrategy = menuStrategy
-        self.menuBarColor = menuColor
-        self.menuBarStyle = menuStyle
+        /// up menu settings
+        menuBarStrategy = menuStrategy
+        menuBarColor = menuColor
+        menuBarStyle = menuStyle
     }
 
     /// The content and behavior of the view
@@ -97,9 +96,9 @@ public struct ScrollableMenuList<C: IMenuItem, M : IListModel, Content: IItemTpl
                     ScrollView {
                         bodyTpl(p)
                     }
-                        .coordinateSpace(name: "OFFSET")
-                        .onChange(of: suspend) { _ in scrollTo(category: selected, proxy) }
-                        .onReceive(publisher) { _ in suspend = false }
+                    .coordinateSpace(name: "OFFSET")
+                    .onChange(of: suspend) { _ in scrollTo(category: selected, proxy) }
+                    .onReceive(publisher) { _ in suspend = false }
                 }
             }
         }.padding(.top)
@@ -113,7 +112,7 @@ public struct ScrollableMenuList<C: IMenuItem, M : IListModel, Content: IItemTpl
     ///   - proxy: geometry proxy
     /// - Returns: modifier
     private func offsetCategoryModifier(_ category: C, _ proxy: GeometryProxy) -> OffsetCategory<C> {
-            .init(category: category, selected: $selected, suspend: $suspend, size: proxy.size)
+        .init(category: category, selected: $selected, suspend: $suspend, size: proxy.size)
     }
 
     @ViewBuilder
@@ -123,21 +122,21 @@ public struct ScrollableMenuList<C: IMenuItem, M : IListModel, Content: IItemTpl
     private func bodyTpl(_ proxy: GeometryProxy) -> some View {
         VStack {
             ForEach(category, id: \.self) {
-
                 if let items = items[$0] {
                     CategoryTpl(
                         content: content,
                         items: items,
                         category: $0,
-                        color: menuBarColor)
-                        .id($0.id)
-                        .modifier(offsetCategoryModifier($0, proxy))
+                        color: menuBarColor
+                    )
+                    .id($0.id)
+                    .modifier(offsetCategoryModifier($0, proxy))
                 }
             }
         }
-            .modifier(ScrollDetect())
-            .onPreferenceChange(ViewOffsetKey.self) { detector.send($0) }
-            .padding(.bottom, 250)
+        .modifier(ScrollDetect())
+        .onPreferenceChange(ViewOffsetKey.self) { detector.send($0) }
+        .padding(.bottom, 250)
     }
 
     @ViewBuilder
@@ -150,11 +149,10 @@ public struct ScrollableMenuList<C: IMenuItem, M : IListModel, Content: IItemTpl
             color: menuBarColor,
             style: menuBarStyle
         )
-            .onSelectionChanged { _ in suspend = true }
-            .padding(.leading, 5)
+        .onSelectionChanged { _ in suspend = true }
+        .padding(.leading, 5)
         Divider().padding(.horizontal, -15).background(menuBarColor)
     }
-
 
     /// Scroll to a category
     /// - Parameters:
