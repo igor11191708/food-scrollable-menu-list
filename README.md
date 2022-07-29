@@ -14,10 +14,6 @@
 - [x] Multiplatform, iOS and macOS support
 - [x] Dark and light scheme support
 
-## Documentation(API)
-- You need to have Xcode 13 installed in order to have access to Documentation Compiler (DocC)
-- Go to Product > Build Documentation or **⌃⇧⌘ D**
-
 ## Required
 
 There are three **required interfaces** that have to be defined
@@ -110,3 +106,7 @@ All representation of the template is up to you. It was included in component's 
 ## Code example
 
 Take a look on the example preview in [**ScrollableMenuListExample.swift**](https://github.com/The-Igor/d3-scrollable-menu-list/blob/main/Sources/d3-scrollable-menu-list/example/ScrollableMenuListExample.swift) or create a project, add the package and put **ScrollableMenuListExample()** in **ContentView()**
+
+## Documentation(API)
+- You need to have Xcode 13 installed in order to have access to Documentation Compiler (DocC)
+- Go to Product > Build Documentation or **⌃⇧⌘ D**
