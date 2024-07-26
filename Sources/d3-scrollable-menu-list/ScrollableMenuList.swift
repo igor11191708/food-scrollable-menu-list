@@ -14,7 +14,7 @@ import SwiftUI
 ///  **IMenuItem** from package **d3_menu_bar**,
 ///  ``IListModel`` and
 ///  ``IItemTpl``
-@available(iOS 15.0, macOS 12.0, watchOS 6.0, *)
+@available(iOS 15.0, macOS 12.0, tvOS 16.0, watchOS 7.0, *)
 public struct ScrollableMenuList<C: IMenuItem, M: IListModel, Content: IItemTpl>: View where M.Category == C
 {
     /// detecting scroll movement
