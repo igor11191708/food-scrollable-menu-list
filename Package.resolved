@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/The-Igor/d3-color.git",
         "state": {
           "branch": null,
-          "revision": "8adafa4a7627474326d735329761411b583cca8e",
-          "version": "2.0.0"
+          "revision": "debe2658f12c08119e8f2c64f3f4a5c47fbe83db",
+          "version": "2.1.0"
         }
       },
       {
@@ -15,7 +15,7 @@
         "repositoryURL": "https://github.com/The-Igor/d3-menu-bar.git",
         "state": {
           "branch": "main",
-          "revision": "e69cf0346c6b2bf488978071f580d7e0ffffa368",
+          "revision": "a011953e7721c688dc66372e439025f701691f9b",
           "version": null
         }
       }
