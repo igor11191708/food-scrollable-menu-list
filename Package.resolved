@@ -3,7 +3,7 @@
     "pins": [
       {
         "package": "d3-color",
-        "repositoryURL": "https://github.com/The-Igor/d3-color.git",
+        "repositoryURL": "https://github.com/igor11191708/d3-color.git",
         "state": {
           "branch": null,
           "revision": "debe2658f12c08119e8f2c64f3f4a5c47fbe83db",
@@ -12,10 +12,10 @@
       },
       {
         "package": "d3-menu-bar",
-        "repositoryURL": "https://github.com/The-Igor/d3-menu-bar.git",
+        "repositoryURL": "https://github.com/igor11191708/d3-menu-bar.git",
         "state": {
           "branch": "main",
-          "revision": "e83700db3583f63879cfaf95a5c503a3c07d0296",
+          "revision": "c6b6e6f8ad536dcdd8a9530f7f3c9b15816c404f",
           "version": null
         }
       }
