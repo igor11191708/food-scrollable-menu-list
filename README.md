@@ -101,11 +101,11 @@ All representation of the template is up to you. It was included in component's 
 |**round**| rounded corners |
 |**square**| squared corners |
 
-[![click to watch expected UI behavior for the example](https://github.com/The-Igor/d3-scrollable-menu-list/blob/main/img/img.png)](https://youtu.be/D0BTNvkSG3U)
-[![click to watch expected UI behavior for the example](https://github.com/The-Igor/d3-scrollable-menu-list/blob/main/img/scroll.gif)](https://youtu.be/D0BTNvkSG3U)
+[![click to watch expected UI behavior for the example](https://github.com/swiftuiux/d3-scrollable-menu-list/blob/main/img/img.png)](https://youtu.be/D0BTNvkSG3U)
+[![click to watch expected UI behavior for the example](https://github.com/swiftuiux/d3-scrollable-menu-list/blob/main/img/scroll.gif)](https://youtu.be/D0BTNvkSG3U)
 ## Code example
 
-Take a look on the example preview in [**ScrollableMenuListExample.swift**](https://github.com/The-Igor/d3-scrollable-menu-list/blob/main/Sources/d3-scrollable-menu-list/example/ScrollableMenuListExample.swift) or create a project, add the package and put **ScrollableMenuListExample()** in **ContentView()**
+Take a look on the example preview in [**ScrollableMenuListExample.swift**](https://github.com/swiftuiux/d3-scrollable-menu-list/blob/main/Sources/d3-scrollable-menu-list/example/ScrollableMenuListExample.swift) or create a project, add the package and put **ScrollableMenuListExample()** in **ContentView()**
 
 ## Documentation(API)
 - You need to have Xcode 13 installed in order to have access to Documentation Compiler (DocC)
