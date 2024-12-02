@@ -1,6 +1,6 @@
 # Auto scrollable header menu - SwiftUI & Combine
 
-[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Figor11191708%2Ffood-scrollable-menu-list%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/igor11191708/food-scrollable-menu-list)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fswiftuiux%2Ffood-scrollable-menu-list%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/swiftuiux/food-scrollable-menu-list)
 
 ## Features
 - [x] Auto scrollable up menu while navigating the list up and down
